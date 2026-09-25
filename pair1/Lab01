@@ -1,0 +1,56 @@
+#1
+#a
+a = int(input("Введіть число: "))
+if a % 2 == 0:
+   print("Парне")
+else:
+   print("Непарне")
+
+#b
+Vik=int(input("Введіть свій вік: "))
+if Vik < 18:
+   print("Ви неповнолітні")
+else:
+   print("Ви повнолітні")
+
+#c
+r = int(input("Введіть радіус: "))
+c = r*2*3.14
+s = r**2*3.14
+print(c)
+print(s)
+
+#d
+a = int(input("Введіть перше число: "))
+b = int(input("Введіть друге число: "))
+if a > b:
+   print("Перше число більше")
+else:
+   print("Друге число більше")
+
+#2
+kord1,kord2 = map(int,input("Введіть координати точки через пробіл:").split())
+if kord1 > 0 and kord2 > 0:
+    print("Точка лежить в першій чверті")
+elif kord1 < 0 and kord2 > 0:
+    print("Точка лежить в другій чверті")
+elif kord1 < 0 and kord2 < 0:
+    print("Точка лежить в третій чверті")
+elif kord1 > 0 and kord2 < 0:
+    print("Точка лежить в четвертій чверті")
+
+#3
+vik = int(input("Введіть свій вік:"))
+if vik > 120:
+    vik = int(input("ВВЕДІТЬ СВІЙ СПРАВЖНІЙ ВІК:"))
+if vik >= 11 and vik <= 14 or vik >= 111 and vik <= 114:
+    print(vik,"років")
+elif vik % 10 == 1 and vik != 11 and vik != 111:
+    print(vik,"рік")
+elif vik % 10 >= 2 and vik % 10 <=4 and vik != 12 and vik != 13 and vik != 14 and vik != 112 and vik != 113 and vik != 114:
+    print(vik,"роки")
+else:
+    print(vik,"років")
+
+#4
+

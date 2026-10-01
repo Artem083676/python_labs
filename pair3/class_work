@@ -1,0 +1,96 @@
+# name = "Мене звати Артем"
+# city = "Kyiv"
+# text = "hello world"
+
+# #lem - це довжина рядка
+# print(len(messege))
+
+# print(name[0])
+# print(name[-1])
+# print(messege[len(messege) - 1])
+
+# text = input()
+# print(text[0])
+# if len(text) > 0:
+#     print(text[0])#вивести текст
+
+# else:
+#     print("Рядок порожній")
+
+# print(text[:2])
+# print(text[2:])
+# print(text[2:5])
+# print(text[::2])#через 1
+# print(text[::-1])#в зворотньому порядку
+
+# text[3] = "3"
+# print(text)
+
+# print(text.upper())#робить все капсом,методи не змінюють саму змінну
+# print(text.lower())#все з малої
+# print(text.capitalize())#перша літера стає великою на початку
+# print(text.title())#кожне слово з великої
+
+# text = "      Python      programming  "
+
+# print(text.lstrip())#видаляє пробіл зліва рядка
+# print(text.rstrip())#видаляє справа
+# print(text.strip())#і там і там,але не в центрі
+
+
+
+# login = "admin"
+# user_login = input("Введи свій логін")
+# if user_login.strip().lower() == login:
+#     print("Welcome")
+
+# text = "Python"
+# for chart in text:
+#     print(chart)
+
+# password = "123qwerty123"
+# digits = 0
+# for i in password:
+#     if i.isdigit():#перевіряє чи є строка цифрою
+#         digits += 1
+# print(digits)
+
+# print(password.isalpha())#чи складається тільки із букв
+# print(password.isalnum())#або літери або цифри,відкидає коми,крапи,пробіли і тд
+
+# print(f'Цифр: {digits}, літер: {letters}')
+
+# text = input("Введи речення").strip().lower()
+# golosni = "аеєиіїоуюя"
+# counter_golosni = 0
+# for i in text:
+#     if i in golosni:
+#         counter_golosni += 1
+# print(counter_golosni)
+
+# text = "Привіт світ ок"
+# words = text.split()#рядок-список
+# print(words)
+
+# text_new = " ".join(words)#джоін обернено до спліта
+# print(text_new)
+
+# text = "Python is easy to learn"
+# new_text = text.replace("Python", "JavaScript")
+# print(new_text)
+
+# word = "Дід "
+# word_norm = word.strip().lower()
+# if word_norm == word_norm[::-1]:
+#     print("паліндром")
+# else:
+#     print("Не паліндром")
+
+text = "world"
+
+# print(text.find("o"))#повертає цифру розташування обраного символа,якщо літер 2,виведеться перша
+# print(text.count("l"))#кількість символів
+
+email = "teacher.ivan.kimarov@gmail.com"
+if email.lower().endswith("@gmail.com"):#startswith протилежний
+    print("У тебе гуглівська пошта")

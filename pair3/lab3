@@ -1,0 +1,64 @@
+#1
+
+# text = input("Введіть текст: ").lower()
+# kilkist = len(text)
+# count = 0
+# count2 = 0
+# count3 = 0
+# count4 = 0
+# count5 = len(text)
+# golosni = "аеєиіїоуюя"
+# for i in text:
+#     if i.isdigit() == True:
+#         count += 1
+#     elif i.isalpha() == True:
+#         count2 += 1
+#     elif i == " ":
+#         count3 += 1
+#     if i in golosni:
+#         count4 += 1
+# a = text.split()
+# count6 = len(a)
+# print(f'Символів: {count5}')
+# print(f'Літер: {count2}')
+# print(f'Цифр: {count}')
+# print(f'Пробілів: {count3}')
+# print(f'Голосних: {count4}')
+# print(f'Слів: {count6}')
+
+#2
+
+# pib = input("Введіть своє прізвище,ім'я,побатькові: ").lower()
+# a = len(pib.split())
+# while a != 3:
+#     pib = input("Введіть своє справжнє ПІБ!: ").lower()
+#     a = len(pib.split())
+# b = pib.split()
+# c = b[0].capitalize()
+# d = b[1].capitalize()
+# e = b[2].capitalize()
+# d = d[0] + "."
+# e = e[0] + "."
+# print(c,d,e,)
+
+#3
+#в завданні є невеличка проблема,в прикладі 2 рядка мають 9 і 10 символів,але вони всеодно анаграми,тобто програма не звертає увагу на пробіли,хоча повинна з умови,отже я зробив таку саму,що незважає на них,а також питання що до великої букви,вважатиму,що це одне і те ж
+# rechennia1 = input("Введіть 1 речення: ").strip()
+# rechennia2 = input("Введіть 2 речення: ").strip()
+# spivpadaut = 0
+# rechennia1 = rechennia1.replace(" ", "")
+# rechennia2 = rechennia2.replace(" ", "")
+# for i in rechennia1:
+#     for g in rechennia2:
+#         if i == g:
+#             spivpadaut += 1
+#             break
+# dovzina1=len(rechennia1)
+# dovzina2 =len(rechennia2)
+# if dovzina1 == spivpadaut and dovzina2 == spivpadaut:
+#     print("Це анаграми!")
+# else:
+#     print("Це не анаграма")
+
+#4
+

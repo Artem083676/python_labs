@@ -1,0 +1,96 @@
+#1
+#якщо я правильно зрозумів - то потрібно написати код для опрацювання лише даного списку,а не того,що вводить користувачь
+# list1 = [12, 3, 4, 14, -12, 5, 10, 16, -4]
+# suma = sum(list1)
+# dovzina = len(list1)
+# dodatni = []
+# vidyemni = []
+# parni = []
+# kratni = []
+# aver = suma / dovzina
+# aver = round(aver,2)
+# maxim = 0
+# minim = 0
+# for i in list1:
+#     if i > 0:
+#         dodatni.append(i)
+#     elif i < 0:
+#         vidyemni.append(i)
+#     if i % 2 == 0:
+#         parni.append(i)
+#     if i % 3 == 0:
+#         kratni.append(i)
+#     if i > maxim:
+#         maxim = i
+#     if i < minim:
+#         minim = i
+# print(f'Додатні: {dodatni}')
+# print(f'''Від'ємні: {vidyemni}''')
+# print(f'Парні: {parni}')
+# print(f'Кратні 3: {kratni}')
+# print(f'Min: {minim}; Max: {maxim}; Sum: {suma}; Avarage: {aver}')
+
+#2
+
+# group1 = {'Anna','Ivan','Olha'}
+# group2 = {'Ivan','Maksym','Olha'}
+# spilni = ", ".join(group1 & group2)
+# tilki1 = ", ".join(group1 - group2)
+# tilki2 = ", ".join(group2 - group1)
+# unique = ", ".join(group1 | group2)
+# print(f'Спільні: {spilni}')
+# print(f'Тільки group1: {tilki1}')
+# print(f'Тільки group2: {tilki2}')
+# print(f'Усі: {unique}')
+
+#3
+
+# dictionary = {
+#     "milk": 48,
+#     "tea": 75,
+#     "cucumber": 60,
+#     "apple": 34
+# }
+
+# bazannia = int(input("Якщо ви хочете додати товар - введіть - 1,якщо змінити ціну - 2,якщо знайти товар за назвою - 3,якщо знайти товар в ціновому діапазоні - 4: "))
+# if bazannia == 1:
+#     nazva = input("Введіть назву товару: ").lower().strip()
+#     price = input("Введіть ціну товару: ")
+#     dictionary[nazva] = price
+#     print("Товар додано.")
+# elif bazannia == 2:
+#     nazva = input("Введіть назву товару: ").lower().strip()
+#     price = int(input("Введіть змінену ціну: "))
+#     for i, g in dictionary.items():
+#         if i == nazva:
+#             dictionary[nazva] = price
+#     print("Ціну змінено.")
+# elif bazannia == 3:
+#     nazva = input("Введіть назву товару: ").lower().strip()
+#     for i, g in dictionary.items():
+#         if i == nazva:
+#             print(f'Назва: {i}, Ціна: {g} грн')
+# elif bazannia == 4:
+#     price1 = int(input("Введіть нижню межу ціни товару: "))
+#     price2 = int(input("Введіть верхню межу ціни товару: "))
+#     for i, g in dictionary.items():
+#         if g >= price1 and g <= price2:
+#             print(f'{i} - {g} грн')
+
+#4
+
+#Журнал групи
+group_info = ('10 ІТ,2026/2027')
+dictionary = {
+    'Сідельник Артем Антонович': [10,8,12,1,7],
+    'Лещенко Матвій Павлович': [11,9,3,9,7],
+    "Вороб'йов Іван Юрійович": [8,10,4,6,9],
+    'Королюк Ілля Володимирович': [2,4,3,2,1],
+}
+
+diya = int(input('Введіть 1,щоб додати учня і його оцінки,2 щоб побачити весь журнал,3 щоб побачити середній бал,4 щоб побачити рейтинг учнів за середнім балом,5 щоб побачити учня з найвищим середнім балом: '))
+if diya == 1:
+    list = []
+    imya = input("Введіть ім'я учня: ")
+    grades = input("Введіть 5 оцінок через кому: ")
+    print(grades)

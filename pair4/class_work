@@ -1,0 +1,140 @@
+#list - це список,впорядкована ЗМІННА колекція
+# grades = [10,8,9]
+# numbers = []
+# new_list = list()
+
+# grades[1] = 12
+# numbers.append(10)#додає 1 елемент
+# numbers.append([10,11])
+# numbers.insert(1,[5,6])
+# numbers.extend([7,8,9,7,5,8])#додавання декількох елементів
+# numbers.remove(7)#видалення за значенням
+# numbers.pop(1)#видалення за індексом
+# #del numbers[1]#видаляє повністю
+# #numbers.clear()#пустий список
+# print(numbers.count(8))#кількість символів
+# print(numbers.index(8))#місце обраного символа
+
+# print(8 in numbers)
+
+# len()#кількість елементів списку
+# min()#найменше значення в списку
+# max()#найбільше значення в списку
+# sum()#суму значень списку
+
+# numbers = [1,5,6,3,7,3]
+# numbers.sort()#перезапусує від малого до великого
+# numbers.sort(reverse = True)#навпаки
+
+# new_numbers = sorted(numbers)#не перезаписує,а створює новий
+# new_numbers.reverse()#розвертає значення
+
+# for number in numbers:
+#     print(number)
+
+# numbers = [-1,-9,-5,3,6,9,-3]
+# positive = []
+# for number in numbers:
+#     if number > 0:
+#         positive.append(number)
+# print(positive)
+
+
+
+#tuple - кортеж,незмінна колекція
+# point  = (-10,12)
+# rgb = (255,0,0)
+# data = ()
+# student = ("Ivan", "Komarov")
+# a = (10,)
+# point = point + (30,)
+# #point + a
+# point = point[:1] + point[2:]
+# point = (-12, 6)
+# x, y = point
+# print(x)
+# print(y)
+
+
+
+
+
+
+#set - множини,функції сета: немає дублікатів,немає індексного доступу,можна додавати можна видаляти
+# subjects = {"Python", "HTML", "CSS", "Javascript"}
+# data = {}
+# print(type(data))
+# subjects.add("C++")
+# subjects.update(["Java", "Python"])
+# subjects.remove("Java")
+# subjects.discard("C#")#не видає помилку при відсутності елемента 
+# #pop та clear теж працюють,ІНДЕКСІВ НЕМАЄ
+
+# name = ["Ivan", "Oleg", "Olga", "Maria", "Maria"]
+# unique_names = set(name)
+# print(name)
+
+# group1 = {"Ivan", "Oleg", "Olga"}
+# group2 = {"Ivan", "Maria", "Anna"}
+
+# group3 = group1 & group2#переріз,спільні елементи
+# group4 = group1 | group2#об'єднання,унікальні елементи залишаються
+# group5 = group1 - group2#є в 1 але відсутні у 2
+# print(group3)
+
+
+
+
+
+#dictionary - словиники,немає індексації - ключі
+# student = {
+#     "name": "Ivan",
+#     "grade": 11
+# }
+
+# student2 = {}#пустий,така сама штука як і множина
+# student3 = dict()
+# print(student["name"])
+# student["age"] = 18#додавання
+# student["age"] = 22#перезапис
+# student.update = student.pop("age")#del видаляє все
+# popitem = student.popitem()#видаляє останню пару значень
+
+# student = {
+#     "name": "Ivan",
+#     "grade": 11
+# }
+
+# print(student.get("age", "такого немає"))#не виводить помилку
+# if "grade" in student:
+#     print(student.get("grade"))
+
+# if "Ivan" in student.values():
+#     print(student.get("name"))
+
+# if "Ivan" in student.keys():
+#     print(student.get("name"))
+
+# print(student.items())
+
+# for key, value in student.items:
+#     print(key)
+#     print(value)
+
+# prices = {
+#     "apple": 45,
+#     "banana": 70,
+#     "kiwi": 150,
+#     "orange": 100
+# }
+
+# print("Усі товари")
+
+# for name, price in prices.items():
+#     print(f'{name}: {price}грн')
+
+# print("Від 50 до 100 грн")
+
+# for name, price in prices.items():
+#     if price > 50 and price <= 100:
+#         print(f'{name}: {price}грн')

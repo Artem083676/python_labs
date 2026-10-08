@@ -1,0 +1,109 @@
+#1
+
+# def rectangle_area(width,height):
+#     return width * height
+# def cyrcle_area(radius):
+#     P = 3.14159
+#     return P * (radius ** 2)
+# def triangle_area(side,height):
+#     return side * height / 2
+
+# figura = input("Оберіть фігуру: ").lower().strip()
+
+# def main(figura):
+#     if figura == 'трикутник':
+#         side = int(input("Введіть сторону: "))
+#         height = int(input("Введіть висту: "))
+#         print(triangle_area(side,height))
+#     elif figura == 'коло':
+#         radius = int(input("Введіть радіус: "))
+#         print(cyrcle_area(radius))
+#     elif figura == 'прямокутник':
+#         width = int(input("Введіть ширину: "))
+#         height = int(input("Введіть висту: "))
+#         print(rectangle_area(width,height))
+# main(figura)
+
+#2
+
+# def is_prime(n):
+#     count = 0
+#     dilnik = 1
+#     while dilnik < n - 1:
+#         dilnik += 1
+#         if n % dilnik == 0:
+#             count += 1
+#     if count == 0:
+#         return "так"
+#     else:
+#         return "ні"
+
+# def divisors(n):
+#     dilniki = []
+#     dilnik = 1
+#     while dilnik < n - 1:
+#         dilnik += 1
+#         if n % dilnik == 0:
+#             dilniki.append(dilnik)
+#     return dilniki
+
+# def digit_sum(n):
+#     suma = 0
+#     while n > 0:
+#         suma = suma + (n % 10)
+#         n = n // 10
+#     return suma
+
+# def main():
+#     n = int(input("n =  "))
+#     print(f'Просте число: {is_prime(n)}')
+#     print(f'Дільники: {divisors(n)}')
+#     print(f'Сума цифр: {digit_sum(n)}')
+
+# main()
+
+#3
+
+# def average(grades):
+#     suma = 0
+#     count = 0
+#     for i in grades:
+#         i = int(i)
+#         suma = suma + i
+#         count += 1
+#     return suma / count
+
+# def minimum(grades):
+#     minim = 12
+#     for i in grades:
+#         i = int(i)
+#         if minim > i:
+#             minim = i
+#     return minim
+
+# def maximum(grades):
+#     maxim = 1
+#     for i in grades:
+#         i = int(i)
+#         if maxim < i:
+#             maxim = i
+#     return maxim
+
+# def count_above(grades, value):
+#     ok = []
+#     for i in grades:
+#         i = int(i)
+#         if i > value:
+#             ok.append(i)
+#     return ok
+
+# def main():
+#     grades = input("Введіть оцінки через пробіли: ").split()
+#     value = int(input("Введіть поріг: "))
+#     print(f'Середній бал: {average(grades)}')
+#     print(f'Мінімальна: {minimum(grades)}')
+#     print(f'Максимальна: {maximum(grades)}')
+#     print(f'Вище {value}: {count_above(grades,value)}')
+
+# main()
+

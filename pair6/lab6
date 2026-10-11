@@ -1,0 +1,78 @@
+#1
+
+# from math import *
+
+# def ploshcha(r):
+#     return round(pi * pow(r,2),2)
+
+# def gipotinuza(k1,k2):
+#     k1 = int(k1)
+#     k2 = int(k2)
+#     return round(sqrt(pow(k1,2) + pow(k2,2)),1)
+
+# def upakovki(predmeti,upakovka):
+#     return ceil(predmeti / upakovka)
+
+# def main():
+#     a = int(input("Радіус: "))
+#     b,b2 = input("Катети: ").split()
+#     c = int(input("Предметів: "))
+#     d = int(input("В упаковці: "))
+#     print(f'Площа круга: {ploshcha(a)}')
+#     print(f'Гіпотенуза: {gipotinuza(b,b2)}')
+#     print(f'Потрібно упаковок: {upakovki(c,d)}')
+
+# main()    
+
+
+#2
+
+# from random import *
+# from statistics import *
+
+# N = int(input("N = "))
+
+# a = []
+# for i in range (N):
+#     a.append(randint(1,12))
+
+# count = 0
+
+# for i in a:
+#     if i >= 10:
+#         count += 1
+
+# print(f'Оцінки: {a}')
+# print(f'Min: {min(a)}')
+# print(f'Max: {max(a)}')
+# print(f'Середнє: {mean(a)}')
+# print(f'Медіана: {median(a)}')
+# print(f'Оцінок 10-12: {(count)}')
+
+#3
+
+from datetime import *
+
+a,b,c = input("Дата події: ").split()
+a = int(a)
+b = int(b)
+c = int(c)
+date1 = date(a,b,c)
+date2 = date.today()
+diffrence = (date2 - date1).days
+if diffrence > 0:
+    print(f'Минуло: {diffrence} днів')
+elif diffrence < 0:
+    diffrence = diffrence * -1
+    print(f'До події залишилося: {diffrence} днів')
+else:
+    print("Подія сьогодні!")
+
+
+
+
+
+
+
+
+

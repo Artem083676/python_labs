@@ -1,0 +1,70 @@
+#1
+
+# with open('text.txt', 'w', encoding='utf-8') as file:#пробний файл
+#     file.write('Кілька рядків укр:тексту\n')
+#     file.write('Кілька рядків укр тексту')
+
+
+# with open('text.txt', 'r', encoding='utf-8') as file:
+#     sliv = 0
+#     simvoli = 0
+#     simvoli2 = 0
+#     for number, line in enumerate(file, start=1):
+#         riadki = number
+#         sliv = sliv + len(line.strip().split(' '))
+#         count = 0
+#         for i in line:
+#             simvoli += 1
+#             count += 1
+#             if count > simvoli2:
+#                 simvoli2 = count
+#                 nomer = number
+#     file.seek(0)
+#     text = file.read()
+
+# print(f'Рядків: {riadki}')
+# print(f'Слів: {sliv}')
+# print(f'Символів: {simvoli}')
+# print(f'Найдовший рядок: №{nomer},символів: {simvoli2}')
+# print(f'Текст: {text}')
+
+
+#2
+
+# with open('text.txt', 'w', encoding='utf-8') as file:#пробний файл
+#     file.write('Кілька рядків укр:тексту\n')
+#     file.write('Кілька рядків укр тексту')
+
+# slovo = input('Фрагмент: ').strip().lower()
+
+# with open('text.txt', 'r', encoding='utf-8') as file:
+#     for nomer,line in enumerate(file, start=1):
+#         line2 = line.lower().split(' ')
+#         for i in line2:
+#             if i == slovo:
+#                 print(f'{nomer}: {line}')
+
+
+#3
+
+with open('students.txt', 'w', encoding='utf-8') as file:#пробний файл
+    file.write('Ivanenko Anna;91\n')
+    file.write('Petrenko Ivan;76\n')
+    file.write('Komarova Olha;97\n')
+
+with open('students.txt', 'r', encoding='utf-8') as file:
+    student_list = []
+    for line in file:
+        line = line.strip()
+        if not line:
+            continue
+        name, bal = line.split(';')
+        bal = int(bal)
+        if bal < 80:
+            continue
+        student_list.append((bal,name))
+    student_list.sort(reverse=True)
+    for bal, line in student_list:
+        print(line,bal)
+
+

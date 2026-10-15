@@ -1,0 +1,91 @@
+#1
+
+# a = input('A: ').strip()
+# b = input('B: ').strip()
+# c = input('Операція: ').strip()
+# try:
+#     a = int(a)
+#     b = int(b)
+#     if b == 0 and c == '/':
+#         raise SyntaxError#я взяв якусь рандомну помилку,просто щоб перервати try
+#     elif c == '+':
+#         print(a + b)
+#     elif c == '-':
+#         print(a - b)
+#     elif c == '*':
+#         print(a * b)
+#     elif c == '/':
+#         print(a / b)    
+#     else:
+#         print('Некоректна операція')
+# except ValueError:
+#     print('Введіть числа звичайними цифрами')
+# except SyntaxError:
+#     print('Ділення на нуль неможливе!')
+
+
+#2
+
+# def input_grade():
+#     while True:
+#         grade = input('Оціна: ')
+#         try:
+#             grade = int(grade)
+#             if grade > 12 or grade < 1:
+#                 raise SyntaxError
+#             print(f'Прийнято: {grade}')
+#             break
+#         except ValueError:
+#             print("Введіть ціле число")
+#         except SyntaxError:
+#             print('Оцінка не в діапазоні від 1 до 12')
+
+# input_grade()
+
+
+#3
+
+students = ['Anna', 'Ivan', 'Artem', 'Matvey', 'Illia']
+grades = {
+    'алгебра': 10,
+    'геометрія': 8,
+    'фізика': 3,
+    'інформатика': 1#співпадіня з реальністю - випадкове;)
+}
+
+bazannia = input('1 - учень, 2 - предмет: ').strip()
+try:
+    bazannia = int(bazannia)
+    if bazannia != 1 and bazannia != 2:
+        raise ValueError
+    
+    if bazannia == 1:
+        index = input('Індекс: ')
+        try:
+            index = int(index)
+            print(f'Учень: {students[index - 1]}')
+        except ValueError:
+            print('Ви ввели не ціле число.')
+        except IndexError:
+            print('Учня з таким індексом немає.')
+
+    if bazannia == 2:
+        predmet = input('Предмет: ').strip().lower()
+        try:
+            print(f'Оцінка: {grades[predmet]}')
+        except KeyError:
+            print('Такого предмету не існує!')
+    
+except ValueError:
+    print('Введіть 1 або 2!!!')
+
+
+
+
+
+
+
+
+
+
+

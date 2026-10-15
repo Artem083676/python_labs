@@ -1,0 +1,151 @@
+# if 5 > 2
+#     print('yes')#синтаксична
+
+# n = int('hello')#ValueError
+
+# try: 
+#     age = int(input('Enter your age: '))
+#     print('You are ' + str(age) + ' years old')
+# except ValueError:
+#     print('please enter a valid age')
+
+
+# try:
+#     a = float(input('a = '))
+#     b = float(input('b = '))
+#     result = a / b
+#     print(result)
+# except ValueError:
+#     print('Введено не число')
+# except ZeroDivisionError:
+#     print('Не можна ділити на нуль')
+
+
+# try:
+#     number = int(input('Please enter a number : '))
+# except ValueError:
+#     print('Please enter a number')
+# else:
+#     print('Квадрат від числа: ', number ** 2)
+
+
+# try:
+#     number = int(input('Please enter a number : '))
+#     print(100 / number)
+# except ValueError:
+#     print('Please enter a number')
+# except ZeroDivisionError:
+#     print('Please enter not 0')
+# finally:
+#     print('Goodbye')
+
+
+# while True:
+#     try:
+#         grade = int(input('введіть оцінку від 1 до 12: '))
+#         if grade < 1 or grade > 12:
+#             raise ValueError('Оцінка повинна бути в межах від 1 до 12')
+#         print(f'Your grade is {grade}')
+#         break
+#     except ValueError as error:
+#         print(f'Error: {error}')
+
+
+# def int_input(message):
+#     while True:
+#         try:
+#             return int(input(message))
+#         except ValueError:
+#             print('Введіть число')
+
+# count = int_input('Введіть число: ')
+# print(f'Кількість: {count}')
+
+
+# def input_grade()
+#     while True:
+#         try:
+#             grade = int(input('Введіть оцінку від 1 до 12: '))
+#             if grade < 1 or grade > 12:
+#                 raise ValueError('Оцінка не в межах від 1 до 12')
+#             return grade
+#         except ValueError as error:
+#             print(error)
+
+# grade = input_grade()
+# print('Прийнято', grade)
+
+
+# students = ['Anna', 'Ivan', 'Sophie']
+# try:
+#     index = int(input('Введіть число: '))
+#     print(students[index])
+# except ValueError:
+#     print('Це не число')
+# except IndexError:
+#     print('Елемента з таким індексом не існує')
+
+
+# price = {
+#     'apple': 100,
+#     'banana': 200,
+#     'mango': 300
+# }
+# product = input('Введіть продукт: ')
+# # try:
+# #     print(f'Ціна: {price[product]}')
+# # except KeyError:
+# #     print('Такого товару немає')
+
+# price = price.get(product, 'Немає у наявності')
+# print(price)
+
+
+# try:
+#     with open('data.txt', 'r', encoding='utf-8') as file:
+#         data = file.read()
+#         print(data)
+# except FileNotFoundError:
+#     print('Файла не знайдено')
+
+
+# line = 'Anna;60'
+
+# parts = line.strip().split(';')
+# if len(parts) != 2:
+#     print('error')
+# else:
+#     name = parts[0]
+#     grade = parts[1]
+
+#     try:
+#         score = int(grade)
+#         if score < 0 or score > 100:
+#             raise ValueError('Оцінка не в діапазоні від 0 до 100')
+#     except ValueError as error:
+#         print(error)
+#     else:
+#         print(f'Запис правильний {name}: {score} балів')
+
+
+lines = [
+    'Anna;90',
+    'Ivan;hello',
+    'Matvey;99'
+]
+
+for line_number,line in enumerate(lines, start=1):
+    parts = line.strip().split(';')
+    if len(parts) != 2:
+        print(f'Рядок №{line_number}: пропущено через неправильний формат\n{line}')
+        continue
+
+    name = parts[0]
+    grade = parts[1]
+    try:
+        grade = int(grade)
+    except ValueError:
+        print(f'Рядок №{line_number}, пропущено: бал не є числом')
+        continue
+    
+    print('Праивильний запис: ', name,grade)

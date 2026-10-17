@@ -1,0 +1,141 @@
+#1
+
+# class Rectangle:
+#     def __init__(self,width,height):
+#         self.width = width
+#         self.height = height
+#     def perimetr(self):
+#         return 2 * (self.width + self.height)
+#     def area(self):
+#         return self.width * self.height
+#     def info(self):
+#         print(f'Ширина: {self.width}, висота: {self.height}')
+#         print(f'Периметр: {self.perimetr()}')
+#         print(f'Площа: {self.area()}')
+
+# rectangle1 = Rectangle(4,5)
+# rectangle2 = Rectangle(7,7)
+# rectangle1.info()
+# rectangle2.info()
+
+
+#2
+
+# class Student:
+#     def __init__(self,name):
+#         self.name = name
+#         self.grades = []
+#     def add_grade(self,grade):
+#         self.grade = grade
+#         if self.grade <= 12 and self.grade >= 1:
+#             self.grades.append(self.grade)
+#         else:
+#             print(f'Оцінка {self.grade} не додається')
+#     def avarage(self):
+#         suma = 0
+#         count = 0
+#         for i in self.grades:
+#             suma += i
+#             count += 1
+#         return round(suma / count, 2)
+#     def __str__(self):
+#         print(f'{self.name}: {self.grades} середній = {self.avarage()}')
+
+# student1 = Student('Ivan Petrenko')
+# student1.add_grade(10)
+# student1.add_grade(13)
+# student1.add_grade(5)
+# student1.__str__()
+
+
+#3
+
+# vocabulary = {}
+# class Student:
+#     def __init__(self,name,grades):
+#         self.name = name
+#         self.grades = grades
+#     def avarage(self):
+#         suma = 0
+#         count = 0
+#         for i in self.grades:
+#             suma += i
+#             count += 1
+#         a = round(suma / count, 2)
+#         vocabulary[self.name] = a
+#         return a
+#     def __str__(self):
+#         return f'{self.name} -- {self.avarage()}'
+
+# student1 = Student('Ivan Petrenko', [10,5,7])
+# student2 = Student('Rikova Anna', [1,2,3])
+# student3 = Student('Illia', [12,11,12])
+# student4 = Student('Ivan Vorobiov', [12,12,11])
+# student5 = Student('Lievchenka', [11,12,12])
+# students = [student1.__str__(),student2.__str__(),student3.__str__(),student4.__str__(),student5.__str__()]
+
+# for i in students:
+#     print(i)
+
+# max_grade = -1
+# best_name = []
+# best_grade = []
+
+# for i,g in vocabulary.items():
+#     if g > max_grade:
+#         max_grade = g
+#         best_name = [i]
+#         best_grade = [g]
+#     elif g == max_grade:
+#         best_name.append(i)
+#         best_grade.append(g)
+
+# a = 0
+# b = 0
+# while a != len(best_name):
+#     print(f'Найкращий результат: {best_name[a]} -- {best_grade[b]}')
+#     a += 1
+#     b += 1
+
+
+#4
+
+class Wallet:
+    def __init__(self,owner,balance):
+        print(f'{owner}: баланс {balance}')
+        self.owner = owner
+        self.balance = balance
+    def deposite(self,amount):
+        print(amount)
+        if amount > 0:
+            self.balance += amount
+        else:
+            print("Поповнення на нульову або від'ємну суму - неможливе")
+    def withdraw(self,amount):
+        print(amount)
+        if amount < 0 and self.balance >= (amount * -1):
+            self.balance += amount
+        elif amount < 0 and self.balance < (amount * -1):
+            print(f"Списання неможливе, бракує: {(amount * -1) - self.balance}")
+        else:
+            print('Списання додатньої суми неможливе')
+    def info(self):
+        print(f'{self.owner}: баланс {self.balance}')
+
+obiekt1 = Wallet('Ivan', 1000)
+obiekt1.deposite(+500)
+obiekt1.withdraw(-300)
+obiekt1.withdraw(-2000)
+obiekt1.info()
+
+print('')
+obiekt2 = Wallet('Olha', 700)
+obiekt2.withdraw(-200)
+obiekt2.deposite(100)
+obiekt2.info()
+
+        
+
+
+
+

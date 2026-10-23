@@ -1,0 +1,125 @@
+#1
+
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
+#     def info(self):
+#         return f'ПІБ: {self.name}'
+
+# class Student(Person):
+#     def __init__(self, name, group):
+#         super().__init__(name)
+#         self.group = group
+#     def info(self):
+#         return f'Учень: {self.name}, група: {self.group}'
+
+# student1 = Student("Anna Ivanenko", "IT-10")
+# student2 = Student("Ivan Anenko", "IT-10")
+# print(student1.info())
+# print(student2.info())
+
+
+#2
+
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
+#     def info(self):
+#         return f'ПІБ: {self.name}'
+
+# class Student(Person):
+#     def __init__(self, name, group):
+#         super().__init__(name)
+#         self.group = group
+#     def info(self):
+#         return f'Учень: {self.name}, група: {self.group}'
+
+# class Teacher(Person):
+#     def __init__(self, name, subject):
+#         super().__init__(name)
+#         self.subject = subject
+#     def info(self):
+#         return f'Викладач: {self.name}, предмет: {self.subject}'
+
+# people = []
+# person = Person('Ivan Vorobiov')
+# student1 = Student("Anna Ivanenko", "IT-10")
+# student2 = Student("Ivan Anenko", "IT-10")
+# teacher = Teacher('Ivan Komarov', 'Fizkultura')
+# people.append(person)
+# people.append(student1)
+# people.append(student2)
+# people.append(teacher)
+
+# for i in people:
+#     print(i.info())
+
+
+#3
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+    def info(self):
+        return f'ПІБ: {self.name}'
+
+class Student(Person):
+    def __init__(self, name, group):
+        super().__init__(name)
+        self.group = group
+    def info(self):
+        return f'{self.name} {self.group}'
+
+class Teacher(Person):
+    def __init__(self, name, subject):
+        super().__init__(name)
+        self.subject = subject
+    def info(self):
+        return f'Викладач: {self.name} | {self.subject}'
+
+class Course(Person):
+    def __init__(self,title, teacher, students):
+        self.title = title
+        self.teacher = teacher
+        self.students = students
+    def add_student(self,student):
+        self.student = student
+        self.students.append(self.student)
+    def remove_student(self,student):
+        self.student = student
+        for i in self.students:
+            if i == student:
+                self.students.remove(i)
+    def info(self):
+        print(f'Курс: {self.title}')
+        print(self.teacher)
+        print('Студенти:')
+        count = 0
+        for i in self.students:
+            count += 1
+            print(f'{count}. {i}')
+    
+
+teacher = Teacher('Ivan', 'Fizkultura')
+student1 = Student("Anna Ivanenko", "IT-10")
+student2 = Student("Ivan Anenko", "IT-10")
+student3 = Student("Anna", "IT-10")
+student4 = Student("Ivan", "IT-10")
+student1 = student1.info()
+student2 = student2.info()
+student3 = student3.info()
+student4 = student4.info()
+students = [student1, student2, student3]
+course = Course('Експрес курс', teacher.info(), students)
+course.add_student(student4)
+course.remove_student(student1)
+
+print(course.info())
+    
+
+        
+
+
+
+
